@@ -1,0 +1,13 @@
+<h2 class="text-center">Регистрация</h2>
+<form action="" (submit)="login()">
+    <div class="form-control">
+        <label for="">Введите имя</label>
+        <input class="form-control" type="text" [(ngModel)]="userName" name="user">
+    </div>
+    <div class="form-control">
+        <label for="">Введите пароль</label>
+        <input class="form-control" type="password" [(ngModel)]="userPassword" name="password">
+    </div>
+    
+    <button class="btn btn-success my-2" type="submit">Добавить</button>
+</form>

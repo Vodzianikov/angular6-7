@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="spinner-border text-primary" role="status" *ngIf="isLoading">
+                     
+    </div>
+    <div
+        *ngIf="!isLoading"
+        class="card mb-2"
+        [ngStyle]="{ cursor: 'pointer'}"
+    >
+        <div class="row g-0">
+            <div class="col-4">
+                <img [src]="car.pictureUrl" alt="" style="width: 100%">
+            </div>
+            <div class="col-6">
+                <div class="card-body">
+                    <h5 class="card-title">{{ car.marka }} {{car.model}}</h5>
+                    <p class="card-text">Цвет - {{ car.color }}</p>
+                    <p class="card-text">Год выпуска - {{ car.year }}</p>
+                    
+                   <button class="btn btn-success mx-2" (click)="editCar()" [disabled]="!isLoggedIn">Редактировать</button>
+                   <button class="btn btn-danger mx-2" (click)="deleteCar()" [disabled]="!isLoggedIn">Удалить</button>
+                   
+
+                  </div>
+            </div>
+       </div>
+    </div>
+
+    <form action="" (submit)="updateCar()" *ngIf="isEdited">
+        <div class="form-control">
+            <label for="">Введите марку</label>
+            <input class="form-control" type="text" [(ngModel)]="car.marka" name="marka">
+        </div>
+        <div class="form-control">
+            <label for="">Введите модель</label>
+            <input class="form-control" type="text" [(ngModel)]="car.model" name="model">
+        </div>
+        <div class="form-control">
+            <label for="">Введите цвет</label>
+            <input class="form-control" type="text" [(ngModel)]="car.color" name="color">
+        </div>
+        <div class="form-control">
+            <label for="">Введите год выпуска</label>
+            <input class="form-control" type="number" [(ngModel)]="car.year" name="year">
+        </div>
+        <div class="form-control">
+            <label for="">Введите адрес картинки</label>
+            <input class="form-control" type="text" [(ngModel)]="car.pictureUrl" name="picture">
+        </div>
+        <button class="btn btn-success my-2" type="submit">Обновить данные</button>
+    </form>
+    
+
+
+
+</div>
+

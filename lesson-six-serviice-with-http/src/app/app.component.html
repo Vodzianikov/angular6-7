@@ -1,0 +1,17 @@
+<h1 class="text-primary text-center">{{ title }}</h1>
+<!-- <app-car *ngFor="let item of cars" [car]="item"></app-car> -->
+<nav class="d-flex justify-content-center">
+    <button class="btn btn-primary mx-2" (click)="showAll()">Показать все</button>
+    <button class="btn btn-primary mx-2" (click)="showCar()">Редактировать по id</button>
+    <button class="btn btn-primary mx-2" (click)="addCar()">Добавить</button>
+    <button class="btn btn-primary mx-2" (click)="deleteCar()">Удалить</button>
+</nav>
+<div [ngSwitch]="choice">
+    <app-cars-list *ngSwitchCase="1" (onChangeChoice)="changeChoice($event)"></app-cars-list>
+    <app-get-car *ngSwitchCase="2"></app-get-car>
+    <app-add-car *ngSwitchCase="3" (onChangeChoice)="changeChoice($event)"></app-add-car>
+    <app-delete-car *ngSwitchCase="4" (onChangeChoice)="changeChoice($event)"></app-delete-car>
+</div>
+
+
+

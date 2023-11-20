@@ -1,0 +1,25 @@
+<h2 class="text-center">Добавить автомобиль</h2>
+<form action="" (submit)="addCar()">
+    <div class="form-control">
+        <label for="">Введите марку</label>
+        <input class="form-control" type="text" [(ngModel)]="car.marka" name="marka">
+    </div>
+    <div class="form-control">
+        <label for="">Введите модель</label>
+        <input class="form-control" type="text" [(ngModel)]="car.model" name="model">
+    </div>
+    <div class="form-control">
+        <label for="">Введите цвет</label>
+        <input class="form-control" type="text" [(ngModel)]="car.color" name="color">
+    </div>
+    <div class="form-control">
+        <label for="">Введите год выпуска</label>
+        <input class="form-control" type="number" [(ngModel)]="car.year" name="year">
+    </div>
+    <div class="form-control">
+        <label for="">Введите адрес картинки</label>
+        <input class="form-control" type="text" [(ngModel)]="car.pictureUrl" name="picture">
+    </div>
+    <button class="btn btn-success my-2" type="submit">Добавить</button>
+</form>
+

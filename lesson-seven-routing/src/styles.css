@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+a {
+    color: rgb(188, 191, 208);
+    display: inline-block;
+    width: 15vw;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}

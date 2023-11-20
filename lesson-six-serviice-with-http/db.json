@@ -1,0 +1,39 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "marka": "vw",
+      "model": "polo",
+      "color": "red",
+      "year": 2015
+    },
+    {
+      "id": 2,
+      "marka": "vw",
+      "model": "boro",
+      "color": "blue",
+      "year": 2020
+    },
+    {
+      "id": 3,
+      "marka": "audi",
+      "model": "q5",
+      "color": "metalic",
+      "year": 2020
+    },
+    {
+      "id": 4,
+      "marka": "geely",
+      "model": "emgrand",
+      "color": "red",
+      "year": 2021
+    },
+    {
+      "marka": "sdfghdfh",
+      "model": "fghjhgfk",
+      "color": "gkjlhl;",
+      "year": 2023,
+      "id": 6
+    }
+  ]
+}

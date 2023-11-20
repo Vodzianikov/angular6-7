@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="spinner-border text-primary" role="status" *ngIf="isLoading">
+                     
+    </div>
+    <div
+        *ngIf="!isLoading"
+        class="card mb-2"
+        [ngStyle]="{ cursor: 'pointer'}"
+    >
+        <div class="row g-0">
+            <div class="col-4">
+                <img [src]="car.pictureUrl" alt="" style="width: 100%">
+            </div>
+            <div class="col-6">
+                <div class="card-body">
+                    <h5 class="card-title">{{ car.marka }} {{car.model}}</h5>
+                    
+                   <button class="btn btn-primary" (click)="goToDetail()">Подробнее</button>
+                  </div>
+            </div>
+            
+        </div>
+
+
+    
+    </div>
+    
+
+
+
+</div>

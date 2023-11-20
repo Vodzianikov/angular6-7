@@ -1,0 +1,44 @@
+<div class="conatainer mt-2">
+    <div class="spinner-border text-primary" *ngIf="isLoading">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div *ngIf="!isLoading">
+        <div class="my-2">
+            <select name="" id="" [(ngModel)]="key">
+                <option value="marka">Marka</option>
+                <option value="model">Model</option>
+                <option value="color">Color</option>
+                <option value="year">Year</option>
+
+            </select>
+        </div>
+
+        <app-car *ngFor="let car of sortedCars(key)" [car]="car"></app-car>
+        
+        <div class="form-inline m-r-1">
+            <select
+              class="form-control"
+              [(ngModel)]="carsPerPage"
+              (change)="changePageSize()"
+            >
+              <option value="3">3 per Page</option>
+              <option value="4">4 per Page</option>
+              <option value="6">6 per Page</option>
+              <option value="8">8 per Page</option>
+            </select>
+        </div>
+        
+        
+        <div class="btn-group pull-xs-right">
+            <button
+              *ngFor="let page of pageNumbers"
+              (click)="changePage(page)"
+              class="btn btn-outline-primary"
+              [class.active]="page == selectedPage"
+            >
+              {{ page }}
+            </button>
+          </div>
+
+    </div>
+</div>

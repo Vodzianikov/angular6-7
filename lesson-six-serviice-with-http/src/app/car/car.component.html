@@ -1,0 +1,22 @@
+<div  class="card mb-3">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <figure>
+                <img src="https://remont-korobok-peredah.ru/assets/images/q5.jpg" alt="car" style="width: 100%">
+            </figure>
+        </div>
+        <div class="col-md-4">
+            <div class="card-body">
+                <h5 class="card-title">{{ car.marka }}</h5>
+                <p class="card-text">Модель - {{ car.model }}</p>
+                <p class="card-text">Цвет: {{ car.color }}</p>
+                <p class="card-text">Год - {{ car.year }}</p>
+            </div>
+        </div>
+        <div class="col-md-4" style="display: flex; flex-direction: column;">
+            <button class="btn btn-success my-3" (click)="editCar()">Редактировать</button>
+   
+            <button class="btn btn-danger my-3" (click)="deleteCar()">Удалить</button>
+        </div>
+    </div>
+</div>
